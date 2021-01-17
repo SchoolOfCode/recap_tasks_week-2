@@ -7,7 +7,7 @@ const bootcampers = [
   "Eugeniu",
   "George",
   "Glenn",
-  "ilker",
+  "Ilker",
   "Jennifer",
   "JohnJames",
   "Joseph",
