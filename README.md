@@ -34,4 +34,7 @@
 
 ## Bonus
 
-👉 Style your pages with CSS!
+
+🎉 For the `makeLegend` function from Task 1, **refactor** it to check that you were handed a string - if you weren't, then return `'A legend requires a string'`
+
+🎉 Style your pages with CSS!
