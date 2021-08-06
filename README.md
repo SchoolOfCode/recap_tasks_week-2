@@ -1,5 +1,9 @@
 # Recap Week 2
 
+Use the files in each task's corresponding folder to complete the following activities.
+
+Remember to commit often using meaningful commit messages!
+
 ## Task 1
 
 👉 Use an array method to produce a new array of all of the bootcampers names which start with `'r'` and store in a new variable.
@@ -10,7 +14,7 @@
 
 ## Task 2
 
-👉 In the task-2 `index.html` there is a `p` tag that contains a counter. Using `setInterval`, have the counter increment once every second when the page is loaded.
+👉 In the task-2 `index.html`, there is a `p` tag that contains a counter. Using `setInterval`, have the counter increment once every second when the page is loaded.
 
 👉 Stop the above interval from incrementing after 12 seconds have passed.
 
@@ -24,7 +28,7 @@
 
 ## Task 4
 
-👉 On your HTML page you will see an input field and an 'Add To List' button. Declare a new variable, `importantThings`, as an empty array. Using JavaScript, configure the website so that when you write something in the input field and click the `Add To List` button, a new item is added to the `importantThings` array.
+👉 On your HTML page, you will see an input field and an 'Add To List' button. Declare a new variable, `importantThings`, as an empty array. Using JavaScript, configure the website so that when you write something in the input field and click the `Add To List` button, a new item is added to the `importantThings` array.
 
 👉 As well as adding the item to the in memory array, now display each added item in an `li` element within the ordered list.
 
@@ -33,7 +37,6 @@
 👉 Add a new button to your site called `Order List`. Wh the button is clicked, reorder your list by priority.
 
 ## Bonus
-
 
 🎉 For the `makeLegend` function from Task 1, **refactor** it to check that you were handed a string - if you weren't, then return `'A legend requires a string'`
 
