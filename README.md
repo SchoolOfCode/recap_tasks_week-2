@@ -10,7 +10,7 @@ Remember to commit often using meaningful commit messages!
 
 👉 Write a function called `makeLegend`, which takes in a `name` (string) as its only argument. The function should return a new string which includes the name plus the words `'is now a legend.'`. For example, if the name given was `'Chris'`, the function would return the string `'Chris is now a legend.'`.
 
-👉 Using an array method and the `makeLegend` function, create a new array which includes `'[name] is now a legend'` for each item. Save assign this new array to the variable `legendaryBootcampers`.
+👉 Using an array method and the `makeLegend` function, create a new array which includes `'[name] is now a legend'` for each item. Save this new array to the variable `legendaryBootcampers`.
 
 ## Task 2
 
@@ -34,7 +34,7 @@ Remember to commit often using meaningful commit messages!
 
 👉 Add a new label and input field element to your `index.html` file. This input field represents the priority value of your important thing, and should take in a number. Refactor your code so that, when you click your `Add To List` button, you add an object to your array, rather than a string value. For example: `let importantThings = [{text: 'telephone mother', priority: 1}]`.
 
-👉 Add a new button to your site called `Order List`. Wh the button is clicked, reorder your list by priority.
+👉 Add a new button to your site called `Order List`. When the button is clicked, reorder your list by priority.
 
 ## Bonus
 
