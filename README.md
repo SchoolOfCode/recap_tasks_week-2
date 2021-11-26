@@ -14,28 +14,21 @@ Remember to commit often using meaningful commit messages!
 
 ## Task 2
 
-<details>
-<summary>
-👉 In the task-2 `index.html`, there is a `p` tag that contains a counter. Using `setInterval`, have the counter increment once every second when the page is loaded.</summary>
-Think about using document.querySelector to access the p tag. How would you track the seconds?
-</details>
+[Click for hints if you get stuck](#hints)
+
+👉 In the task-2 `index.html`, there is a `p` tag that contains a counter. Using `setInterval`, have the counter increment once every second when the page is loaded.
 
 👉 Stop the above interval from incrementing after 12 seconds have passed using the [clearInterval](https://www.w3schools.com/jsref/met_win_clearinterval.asp) function
 
 ## Task 3
 
-<details><summary>👉 Using `fetch`, get a random cat image URL using the following API: https://api.thecatapi.com/v1/images/search
-</summary>
-Remember fetch returns you a promise. You always await a promise. To use await, you must be in an async function.
-</details>
+[Click for hints if you get stuck](#hints)
 
-<details><summary>👉 Once you have retrieved your image URL, display the image on the page using the `img` element provided. A different picture should be displayed every time you reload the page.</summary>
-You can set the [src attribute](https://www.w3schools.com/jsref/met_win_clearinterval.asp) of the `img` just like you would set the innerText of a `p` element
-</details>
+👉 Using `fetch`, get a random cat image URL using the following API: https://api.thecatapi.com/v1/images/search
 
-<details><summary>👉 Create a button element. Add an event listener to the button so that, when you click the button, a new image is displayed.</summary>
-You already have a function which grabs new images and updates the image shown on the page. Link this to the button through addEventListener
-</details>
+👉 Once you have retrieved your image URL, display the image on the page using the `img` element provided. A different picture should be displayed every time you reload the page.
+
+👉 Create a button element. Add an event listener to the button so that, when you click the button, a new image is displayed.
 
 ## Bonus: Task 4
 
@@ -54,3 +47,17 @@ You already have a function which grabs new images and updates the image shown o
 ## Bonus Bonus Bonus
 
 🎉 Style your pages with CSS!
+
+## Hints
+
+### Task 2
+
+Think about using document.querySelector to access the p tag. How would you track the seconds?
+
+### Task 3
+
+Remember fetch returns you a promise. You always await a promise. To use await, you must be in an async function.
+
+You can set the [src attribute](https://www.w3schools.com/jsref/met_win_clearinterval.asp) of the `img` just like you would set the innerText of a `p` element
+
+You already have a function which grabs new images and updates the image shown on the page. Link this to the button through addEventListener
