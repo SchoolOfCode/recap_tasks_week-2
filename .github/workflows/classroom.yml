@@ -11,10 +11,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Autograding
         uses: education/autograding@v1
-      - name: List files
-        run: |
-          ls -alh
-          pwd
       - name: Upload Jest output
         uses: actions/upload-artifact@v3
         with:
