@@ -1,0 +1,23 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Autograding
+        uses: education/autograding@v1
+      - name: List files
+        run: |
+          ls -alh
+          pwd
+      - name: Upload Jest output
+        uses: actions/upload-artifact@v3
+        with:
+          name: jest-report
+          path: ./.github/.test/results.json
+          if-no-files-found: error

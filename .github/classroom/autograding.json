@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Run all tests",
+      "setup": "npm --prefix ./.github/.test install",
+      "run": "npm --prefix ./.github/.test t",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}
