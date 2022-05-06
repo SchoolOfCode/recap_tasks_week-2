@@ -20,7 +20,7 @@ Remember to break down each task, make a plan before you code, and commit often 
 
 👉 Stop the above interval from incrementing after 12 seconds have passed using the [clearInterval](https://www.w3schools.com/jsref/met_win_clearinterval.asp) function. So 12 should be the last count displayed on the page.
 
-⚠️ Use `textContent` (and avoid using `innerText`, `innerHTML`, and `outerHTML`) when updating the displayed count.
+⚠️ Try using `textContent` to change the text in the `p` tag. Read [this article](https://kellegous.com/j/2013/02/27/innertext-vs-textcontent/) for more details.
 
 ## Task 3
 
