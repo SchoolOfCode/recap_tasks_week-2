@@ -16,9 +16,11 @@ Remember to commit often using meaningful commit messages!
 
 [Click for hints if you get stuck](#hints)
 
-👉 In the task-2 `index.html`, there is a `p` tag that contains a counter. Using `setInterval`, have the counter increment once every second when the page is loaded.
+👉 In the task-2 `index.html`, there is a `p` tag (with an id of `count`) that displays a count. Ensure the count displays 0 when the page loads and then, using `setInterval`, have it increment by 1 every second.
 
-👉 Stop the above interval from incrementing after 12 seconds have passed using the [clearInterval](https://www.w3schools.com/jsref/met_win_clearinterval.asp) function
+👉 Stop the above interval from incrementing after 12 seconds have passed using the [clearInterval](https://www.w3schools.com/jsref/met_win_clearinterval.asp) function. So 12 should be the last count displayed on the page.
+
+⚠️ Use `textContent` (and avoid using `innerText`, `innerHTML`, and `outerHTML`) when updating the displayed count.
 
 ## Task 3
 
@@ -26,9 +28,9 @@ Remember to commit often using meaningful commit messages!
 
 👉 Using `fetch`, get a random cat image URL using the following API: https://api.thecatapi.com/v1/images/search
 
-👉 Once you have retrieved your image URL, display the image on the page using the `img` element provided. A different picture should be displayed every time you reload the page.
+👉 Once you have retrieved your image URL, display the image on the page using the `img` element provided (with id of `cat-here`). A different picture should be displayed every time you reload the page.
 
-👉 Create a button element. Add an event listener to the button so that, when you click the button, a new image is displayed.
+👉 Using JavaScript, create a button element and add it to the page. Add an event listener to the button so that, when you click the button, a new image is displayed.
 
 ## Bonus: Task 4
 
@@ -58,6 +60,6 @@ Think about using document.querySelector to access the p tag. How would you trac
 
 Remember fetch returns you a promise. You always await a promise. To use await, you must be in an async function.
 
-You can set the [src attribute](https://www.w3schools.com/jsref/met_win_clearinterval.asp) of the `img` just like you would set the innerText of a `p` element
+You can set the [src attribute](https://www.w3schools.com/jsref/met_win_clearinterval.asp) of the `img` just like you would set the `textContent` of a `p` element
 
 You already have a function which grabs new images and updates the image shown on the page. Link this to the button through addEventListener
