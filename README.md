@@ -26,13 +26,17 @@ Remember to break down each task, make a plan before you code, and commit often 
 
 [Click for hints if you get stuck](#hints)
 
-👉 Using `fetch`, get a random cat image URL using the following API: https://api.thecatapi.com/v1/images/search
+For this task, you'll be using the [Cat API](https://thecatapi.com/) to get image URLs.
+
+👉 Using `fetch`, get a random cat image URL using the API URL: https://api.thecatapi.com/v1/images/search
 
 👉 Once you have retrieved your image URL, display the image on the page using the `img` element provided (with id of `cat-here`). A different picture should be displayed every time you reload the page.
 
 👉 Using JavaScript, create a button element and add it to the page. Add an event listener to the button so that, when you click the button, a new image is displayed.
 
-## Bonus: Task 4
+## ⭐ Bonus
+
+Use the task-4 folder for these.
 
 👉 On your HTML page, you will see an input field and an 'Add To List' button. Declare a new variable, `importantThings`, as an empty array. Using JavaScript, configure the website so that when you write something in the input field and click the `Add To List` button, a new item is added to the `importantThings` array.
 
@@ -42,11 +46,11 @@ Remember to break down each task, make a plan before you code, and commit often 
 
 👉 Add a new button to your site called `Order List`. When the button is clicked, reorder your list by priority.
 
-## Bonus Bonus
+## ⭐ Bonus Bonus
 
 🎉 For the `makeLegend` function from Task 1, **refactor** it to check that you were handed a string - if you weren't, then return `'A legend requires a string'`
 
-## Bonus Bonus Bonus
+## ⭐ Bonus Bonus Bonus
 
 🎉 Style your pages with CSS!
 
