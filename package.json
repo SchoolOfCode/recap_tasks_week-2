@@ -2,7 +2,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --json --outputFile=results.json",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "task-1": "npm t -- task-1",
     "task-2": "npm t -- task-2",
     "task-3": "npm t -- task-3"
