@@ -6,7 +6,7 @@ Remember to break down each task, make a plan before you code, and commit often 
 
 ## Task 1
 
-👉 Write a function called `makeLegend`, which takes in a `name` (string) as its only argument. The function should return a new string which includes the name plus the words `'is now a legend.'`.
+👉 Write a function called `makeLegend`, which takes in a `name` (string) as its only argument. The function should return a new string which includes the name plus the words `' is now a legend.'`.
 
 - For example, if the function was called with the name `'Chris'`, it should return the string `'Chris is now a legend.'`.
 
