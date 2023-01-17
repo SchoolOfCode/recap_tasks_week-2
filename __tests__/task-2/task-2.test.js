@@ -1,14 +1,8 @@
 import { JSDOM } from "jsdom";
 import path from "path";
-import {
-  it,
-  expect,
-  beforeAll,
-  afterAll,
-  jest,
-  beforeEach,
-} from "@jest/globals";
-import "@testing-library/jest-dom/extend-expect";
+import { it, expect, beforeAll, afterAll, vi, beforeEach } from "vitest";
+import matchers from "@testing-library/jest-dom/matchers";
+expect.extend(matchers);
 
 /** @type {JSDOM["window"]} */
 let window;
@@ -19,10 +13,10 @@ let document;
 /** @type {HTMLParagraphElement} */
 let p;
 
-const filePath = path.resolve("..", "..", "task-2", "index.html");
+const filePath = path.resolve("task-2", "index.html");
 
 beforeAll(async () => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
 
   const jsdom = await JSDOM.fromFile(filePath, {
     contentType: "text/html",
@@ -41,9 +35,9 @@ beforeAll(async () => {
       window.setInterval = global.setInterval;
       window.clearInterval = global.clearInterval;
       window.clearTimeout = global.clearTimeout;
-      jest.spyOn(window, "setInterval");
-      jest.spyOn(window, "clearInterval");
-      jest.spyOn(window.document, "querySelector");
+      vi.spyOn(window, "setInterval");
+      vi.spyOn(window, "clearInterval");
+      vi.spyOn(window.document, "querySelector");
     },
   });
 
@@ -56,8 +50,8 @@ beforeAll(async () => {
 });
 
 afterAll(() => {
-  jest.runOnlyPendingTimers();
-  jest.useRealTimers();
+  vi.runOnlyPendingTimers();
+  vi.useRealTimers();
 });
 
 beforeEach(() => {
@@ -91,12 +85,12 @@ it.each([
   ["11", 11],
   ["12", 12],
 ])("should display %s in paragraph element after %d second(s)", (expected) => {
-  jest.advanceTimersByTime(1_000);
+  vi.advanceTimersByTime(1_000);
   expect(p).toHaveTextContent(expected);
 });
 
 it("should call clearInterval after 12 seconds", () => {
-  jest.advanceTimersByTime(1_000);
+  vi.advanceTimersByTime(1_000);
   expect(window.clearInterval).toHaveBeenCalled();
 });
 
@@ -106,7 +100,7 @@ it("should call clearInterval with the value returned from setInterval", () => {
 });
 
 it("should still display 12 in paragraph element after an hour", () => {
-  jest.advanceTimersByTime(3_600_000);
+  vi.advanceTimersByTime(3_600_000);
   expect(p).toHaveTextContent("12");
 });
 

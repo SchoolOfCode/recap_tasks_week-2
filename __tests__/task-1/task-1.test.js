@@ -1,10 +1,11 @@
 import fs from "fs/promises";
 import path from "path";
 import rewire from "rewire";
-import { it, expect, describe } from "@jest/globals";
-import acorn from "acorn";
+import { it, expect, describe } from "vitest";
+import { parse } from "acorn";
 
-const filePath = path.join("..", "..", "task-1", "main.js");
+const filePath = path.resolve("task-1", "main.js");
+
 const mainScript = rewire(filePath);
 
 const [makeLegend, vowelCelebs, legendaryCelebs] = [
@@ -25,7 +26,7 @@ const [makeLegend, vowelCelebs, legendaryCelebs] = [
 });
 
 const rawScript = await fs.readFile(filePath, { encoding: "utf-8" });
-const parsed = acorn.parse(rawScript, { ecmaVersion: "latest" });
+const parsed = parse(rawScript, { ecmaVersion: "latest" });
 
 describe("makeLegend", () => {
   it("should be defined in main.js", () => {
@@ -51,7 +52,7 @@ describe("makeLegend", () => {
   });
 
   it("should have a parameter called 'name'", () => {
-    const ast = acorn.parse(makeLegend.toString(), {
+    const ast = parse(makeLegend.toString(), {
       ecmaVersion: "latest",
     });
     const parameters = ast.body[0].expression?.params ?? ast.body[0].params;
@@ -65,17 +66,8 @@ describe("legendaryCelebs", () => {
     expect(legendaryCelebs).toBeDefined();
   });
 
-  it("should be an array", () => {
-    // toStrictEqual(expect.any(Array)) doesn't pass (for some reason)
-    expect(Array.isArray(legendaryCelebs)).toBe(true);
-  });
-
-  it("should only contain expected values", () => {
-    // Strange, seem to have to spread into a new array.
-    // Not yet sure why the array provided by rewire doesn't satisfy the 'toStrictEqual' matcher.
-    // They don't seem to serialise to the same string.
-
-    expect([...legendaryCelebs]).toStrictEqual([
+  it("should be an array containing only expected values", () => {
+    expect(legendaryCelebs).toStrictEqual([
       "David Beckham is now a legend.",
       "Cher is now a legend.",
       "Madonna is now a legend.",
@@ -102,13 +94,8 @@ describe("vowelCelebs", () => {
     expect(vowelCelebs).toBeDefined();
   });
 
-  it("should be an array only containing expected values", () => {
-    // toStrictEqual(["Angelina Jolie", "Emma Thompson"]) doesn't pass (for some reason)
-    expect(Array.isArray(vowelCelebs)).toBe(true);
-    // Strange, seem to have to spread into a new array.
-    // Not yet sure why the array provided by rewire doesn't directly satisfy the 'toStrictEqual' matcher.
-    // Expected and actual don't seem to serialise to the same string.
-    expect([...vowelCelebs]).toStrictEqual(["Angelina Jolie", "Emma Thompson"]);
+  it("should be an array containing only expected values", () => {
+    expect(vowelCelebs).toStrictEqual(["Angelina Jolie", "Emma Thompson"]);
   });
 
   // Maybe write some more tests which check certain implementation details or AST assertions?

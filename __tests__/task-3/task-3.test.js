@@ -1,9 +1,10 @@
 import { JSDOM } from "jsdom";
 import path from "path";
-import { it, expect, jest, beforeAll } from "@jest/globals";
-import "@testing-library/jest-dom";
+import { it, expect, vi, beforeAll } from "vitest";
 import * as catApi from "./cat-api.js";
 import { setImmediate } from "timers/promises";
+import matchers from "@testing-library/jest-dom/matchers";
+expect.extend(matchers);
 
 const apiUrl = "https://api.thecatapi.com/v1/images/search";
 
@@ -13,10 +14,10 @@ let window;
 /** @type {JSDOM["window"]["document"]} */
 let document;
 
-const filePath = path.resolve("..", "..", "task-3", "index.html");
+const filePath = path.resolve("task-3", "index.html");
 
-const json = jest.fn(async () => catApi.primaryResponse);
-const fetch = jest.fn(async () => {
+const json = vi.fn(async () => catApi.primaryResponse);
+const fetch = vi.fn(async () => {
   return {
     ok: true,
     status: 200,
