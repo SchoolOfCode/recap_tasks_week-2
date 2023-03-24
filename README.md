@@ -4,7 +4,7 @@ Use the files in each task's corresponding folder to complete the following acti
 
 **Remember to break down each task, make a plan before you code, and commit often using meaningful commit messages!**
 
-You can click here to view the videos made by your fellow bootcampers this week to learn more about the additional topics related to this week's content as well.
+Note: You can [click here](https://docs.google.com/spreadsheets/d/1ZtNGUhP50j8S2Qn1i0VwlHlfYH0QpIs5iVYyGKnl3LU/edit?usp=sharing) to view the videos made by your fellow bootcampers this week as well!
 
 ## Task 1
 
