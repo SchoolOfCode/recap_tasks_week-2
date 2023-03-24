@@ -2,7 +2,9 @@
 
 Use the files in each task's corresponding folder to complete the following activities.
 
-Remember to break down each task, make a plan before you code, and commit often using meaningful commit messages!
+**Remember to break down each task, make a plan before you code, and commit often using meaningful commit messages!**
+
+Note: You can [click here](https://docs.google.com/spreadsheets/d/1ZtNGUhP50j8S2Qn1i0VwlHlfYH0QpIs5iVYyGKnl3LU/edit?usp=sharing) to view the videos made by your fellow bootcampers this week as well!
 
 ## Task 1
 
@@ -25,8 +27,6 @@ Remember to break down each task, make a plan before you code, and commit often 
 👉 In the task-2 `index.html`, there is a `p` tag (with an id of `count`) that displays a count. Ensure the count displays 0 when the page loads and then, using `setInterval`, have it increment by 1 every second.
 
 👉 Stop the above interval from incrementing after 12 seconds have passed using the [clearInterval](https://www.w3schools.com/jsref/met_win_clearinterval.asp) function. So 12 should be the last count displayed on the page.
-
-⚠️ Try using `textContent` to change the text in the `p` tag. Read [this article](https://kellegous.com/j/2013/02/27/innertext-vs-textcontent/) for more details.
 
 ## Task 3
 
